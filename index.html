@@ -132,6 +132,7 @@
                 transition: right 0.3s ease;
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
                 z-index: 999;
+                overflow-y: auto; /* Add scrollbar for mobile menu */
             }
 
             nav.active {
@@ -141,7 +142,8 @@
             nav ul {
                 flex-direction: column;
                 padding-top: 80px;
-                height: 100%;
+                height: auto;
+                padding-bottom: 20px;
             }
 
             nav ul li {
@@ -401,18 +403,24 @@
             text-align: center;
         }
 
+        .sponsors-grid div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .sponsors-grid div:hover {
+            transform: translateY(-5px);
+        }
+
         .sponsor-logo {
             width: 150px;
             height: auto;
             max-height: 100px;
             object-fit: contain;
-            transition: transform 0.3s ease;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .sponsor-logo:hover {
-            transform: scale(1.1);
         }
 
         /* Enhanced Price Display */
@@ -1190,10 +1198,10 @@
         <p style="color: #fff; text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 18px;">We are grateful to our sponsors for their support in making the BCM Open 2025 a success.</p>
         <div class="sponsors-grid">
             <div>
-                <img src="assets/pictures/aawlogo.jpg" alt="AAW Sponsor Logo" class="sponsor-logo">
+                <img src="assets/pictures/AAW_logo.jpg" alt="AAW Sponsor Logo" class="sponsor-logo">
             </div>
             <div>
-                <img src="assets/pictures/zcphlogo.jpg" alt="ZCPH Sponsor Logo" class="sponsor-logo">
+                <img src="assets/pictures/ZCPH_logo.jpg" alt="ZCPH Sponsor Logo" class="sponsor-logo">
             </div>
             <div>
                 <img src="assets/pictures/logo.png" alt="BCM Sponsor Logo" class="sponsor-logo">
@@ -1420,7 +1428,7 @@
                 });
             }, observerOptions);
 
-            document.querySelectorAll('.event-item, .contact-card, .feature-card, .sponsor-logo').forEach(el => {
+            document.querySelectorAll('.event-item, .contact-card, .feature-card, .sponsors-grid div').forEach(el => {
                 observer.observe(el);
             });
         });
