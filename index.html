@@ -31,7 +31,7 @@
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
-            overflow-x: hidden; /* Prevent horizontal scrollbar */
+            overflow-x: hidden;
         }
 
         .logo {
@@ -68,7 +68,7 @@
             height: 3px;
             background-color: #333;
             margin: 3px 0;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             transform-origin: center;
         }
 
@@ -95,11 +95,11 @@
             margin: 0;
             padding: 0;
             align-items: center;
-            flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            margin-left: 15px; /* Reduced margin for tighter spacing */
+            margin-left: 15px;
         }
 
         nav ul li a {
@@ -107,10 +107,10 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            font-size: clamp(14px, 2vw, 15px); /* Smaller, responsive font size */
-            padding: 6px 10px; /* Reduced padding for compact buttons */
+            font-size: clamp(14px, 2vw, 15px);
+            padding: 6px 10px;
             border-radius: 5px;
-            white-space: nowrap; /* Prevent text wrapping within buttons */
+            white-space: nowrap;
         }
 
         nav ul li a:hover {
@@ -127,9 +127,8 @@
             nav {
                 position: fixed;
                 top: 0;
-                right: -100%; /* Start off-screen */
-                width: 80vw; /* Use 80% of viewport width for better fit */
-                max-width: 320px; /* Cap the width for larger phones */
+                right: -100%;
+                width: 100vw; /* Full screen width */
                 height: 100vh;
                 background-color: rgba(255, 255, 255, 0.98);
                 backdrop-filter: blur(10px);
@@ -141,14 +140,15 @@
             }
 
             nav.active {
-                right: 0; /* Slide in to the right edge */
+                right: 0;
             }
 
             nav ul {
                 flex-direction: column;
-                padding: 80px 0 20px;
+                padding: 80px 20px 20px;
                 margin: 0;
                 width: 100%;
+                align-items: flex-start;
             }
 
             nav ul li {
@@ -160,7 +160,7 @@
             nav ul li a {
                 display: block;
                 padding: 15px 20px;
-                font-size: 16px;
+                font-size: 18px;
                 color: #333;
                 text-align: left;
                 width: 100%;
@@ -173,7 +173,6 @@
                 color: #fff;
             }
 
-            /* Mobile Overlay */
             .nav-overlay {
                 display: none;
                 position: fixed;
@@ -191,7 +190,6 @@
                 opacity: 1;
             }
 
-            /* Prevent body scrolling when menu is open */
             body.nav-open {
                 overflow: hidden;
             }
@@ -883,24 +881,25 @@
             <span></span>
             <span></span>
         </button>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#upcoming">Events</a></li>
-                <li><a href="#welcome">Welcome</a></li>
-                <li><a href="#why-participate">Why Participate</a></li>
-                <li><a href="#organizing-team">Organizing Team</a></li>
-                <li><a href="#technical-team">Technical Team</a></li>
-                <li><a href="#venue">Venue</a></li>
-                <li><a href="#highlights">Highlights</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="#calendar">Calendar</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#upcoming">Events</a></li>
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#why-participate">Why Participate</a></li>
+            <li><a href="#organizing-team">Organizing Team</a></li>
+            <li><a href="#technical-team">Technical Team</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#calendar">Calendar</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -971,7 +970,7 @@
         <div style="max-width: 900px; margin: 0 auto;">
             <div class="content-card">
                 <h4>Welcome to the BCM Open 2025 Chess Championship!</h4>
-                <p>Gather with us from November 20–23, 2025, at the iconic Mulungushi International Conference Centre in central Lusaka conveniently located on Great East Road and easily accessible from the city center, airport, and major transportation routes.</p>
+                <p>Gather with us from November 20–23, 2025, at the iconic Mulungushi International Conference Centre in central Lusaka, conveniently located on Great East Road and easily accessible from the city center, airport, and major transportation routes.</p>
                 <p>Organized by BCM Consult, this premier FIDE-rated tournament promises a competitive experience wrapped in comfort, professionalism, and prestige.</p>
             </div>
         </div>
@@ -1214,7 +1213,12 @@
 
     <section id="about" class="page-section">
         <h2>About Us</h2>
-        <p style="color: #fff; text-align: center; max-width: 800px; margin: 0 auto 40px;">BCM Consult is dedicated to promoting chess in Zambia and Africa. We organize high-quality FIDE-rated tournaments to foster talent and competition.</p>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="content-card">
+                <h4>About BCM Consult</h4>
+                <p>BCM Consult is dedicated to promoting chess in Zambia and Africa. We organize high-quality FIDE-rated tournaments to foster talent and competition. Our mission is to create opportunities for players of all levels to compete, grow, and connect through the game of chess.</p>
+            </div>
+        </div>
     </section>
 
     <section id="calendar" class="page-section">
@@ -1263,35 +1267,35 @@
     <section id="support" class="page-section">
         <h2>Support</h2>
         <div style="max-width: 800px; margin: 0 auto;">
-            <div style="margin-bottom: 30px; background-color: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-                <h4 style="color: #ff4500; margin-bottom: 15px; font-size: 18px;">How do I register?</h4>
-                <p style="color: #333; margin: 0;">Click on "Get Tickets" and follow the instructions to register and pay.</p>
+            <div class="content-card">
+                <h4>How do I register?</h4>
+                <p>Click on "Get Tickets" and follow the instructions to register and pay.</p>
             </div>
-            <div style="margin-bottom: 30px; background-color: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-                <h4 style="color: #ff4500; margin-bottom: 15px; font-size: 18px;">What is the venue?</h4>
-                <p style="color: #333; margin: 0;">Mulungushi Conference Centre, Lusaka, Zambia.</p>
+            <div class="content-card">
+                <h4>What is the venue?</h4>
+                <p>Mulungushi Conference Centre, Lusaka, Zambia.</p>
             </div>
-            <div style="margin-bottom: 30px; background-color: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-                <h4 style="color: #ff4500; margin-bottom: 15px; font-size: 18px;">Are there refunds?</h4>
-                <p style="color: #333; margin: 0;">No, fees are non-refundable unless the event is canceled.</p>
+            <div class="content-card">
+                <h4>Are there refunds?</h4>
+                <p>No, fees are non-refundable unless the event is canceled.</p>
             </div>
         </div>
     </section>
 
     <section id="highlights" class="page-section">
         <h2>Highlights</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto;">
-            <div style="background-color: rgba(255, 255, 255, 0.95); padding: 30px 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); text-align: center; transition: transform 0.3s ease;">
-                <h3 style="color: #ff4500; margin-bottom: 15px; font-size: 20px;">FIDE Rated</h3>
-                <p style="color: #333; margin: 0;">Compete in an official FIDE-rated tournament and improve your rating.</p>
+        <div class="feature-grid" style="max-width: 1000px; margin: 0 auto;">
+            <div class="feature-card">
+                <h3>FIDE Rated</h3>
+                <p>Compete in an official FIDE-rated tournament and improve your rating.</p>
             </div>
-            <div style="background-color: rgba(255, 255, 255, 0.95); padding: 30px 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); text-align: center; transition: transform 0.3s ease;">
-                <h3 style="color: #ff4500; margin-bottom: 15px; font-size: 20px;">Attractive Prizes</h3>
-                <p style="color: #333; margin: 0;">Win cash prizes, trophies, medals, and certificates.</p>
+            <div class="feature-card">
+                <h3>Attractive Prizes</h3>
+                <p>Win cash prizes, trophies, medals, and certificates.</p>
             </div>
-            <div style="background-color: rgba(255, 255, 255, 0.95); padding: 30px 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); text-align: center; transition: transform 0.3s ease;">
-                <h3 style="color: #ff4500; margin-bottom: 15px; font-size: 20px;">Developmental Focus</h3>
-                <p style="color: #333; margin: 0;">Sections for young players to build the future of chess in Africa.</p>
+            <div class="feature-card">
+                <h3>Developmental Focus</h3>
+                <p>Sections for young players to build the future of chess in Africa.</p>
             </div>
         </div>
     </section>
@@ -1301,13 +1305,14 @@
         <p style="color: #fff; text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 18px;">We are grateful to our sponsors for their support in making the BCM Open 2025 a success.</p>
         <div class="lead-sponsor">
             <h3>Lead Sponsor: PhilteQ Consult LTD</h3>
-            <a href="https://www.philteqconsult.com/" target="PQCL">
+            <a href="https://www.philteqconsult.com/" target="_blank">
                 <img src="assets/pictures/pqcl.png" alt="PhilteQ Consult LTD Lead Sponsor Logo">
             </a>
+            <p style="color: #fff; max-width: 600px; margin: 15px auto;">PhilteQ Consult LTD, Zambia's first one-stop consultancy, brings expertise in business development, financial advisory, and intellectual property to drive growth and innovation.</p>
             <div>
                 <img src="assets/pictures/lead_sponsor_qr.png" alt="PhilteQ Consult LTD QR Code" class="qr-code">
             </div>
-            <a href="https://bcmconsult.com" target="_blank" class="view-all">Visit Sponsor</a>
+            <a href="https://www.philteqconsult.com/" target="_blank" class="view-all">Visit Sponsor</a>
         </div>
         <div class="sponsors-grid">
             <div>
