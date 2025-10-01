@@ -96,7 +96,7 @@
             padding: 0;
             align-items: center;
             gap: 8px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap; /* Prevent wrapping to avoid scroll */
         }
 
         nav ul li a {
@@ -113,6 +113,39 @@
         nav ul li a:hover {
             color: #fff;
             background-color: #ff4500;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 160px;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 10px 15px;
+            display: block;
+            font-size: 14px;
+            border-radius: 0;
+        }
+
+        .submenu li a:hover {
+            background-color: #f1f1f1;
         }
 
         /* Mobile Navigation */
@@ -156,6 +189,16 @@
                 padding: 12px 20px;
                 font-size: 16px;
                 text-align: left;
+            }
+
+            .submenu {
+                position: static;
+                box-shadow: none;
+                display: block; /* Always show in mobile */
+            }
+
+            .submenu li a {
+                padding-left: 30px; /* Indent subitems */
             }
 
             .nav-overlay {
@@ -938,18 +981,27 @@
         <nav>
             <ul>
                 <li><a href="#home" aria-label="Home">Home</a></li>
-                <li><a href="#upcoming" aria-label="Events">Events</a></li>
                 <li><a href="#welcome" aria-label="Welcome">Welcome</a></li>
                 <li><a href="#why-participate" aria-label="Why Participate">Why Participate</a></li>
-                <li><a href="#organizing-team" aria-label="Organizing Team">Organizing Team</a></li>
-                <li><a href="#technical-team" aria-label="Technical Team">Technical Team</a></li>
+                <li class="dropdown">
+                    <a href="#">TEAMS</a>
+                    <ul class="submenu">
+                        <li><a href="#organizing-team">Organizing Team</a></li>
+                        <li><a href="#technical-team">Technical Team</a></li>
+                    </ul>
+                </li>
                 <li><a href="#venue" aria-label="Venue">Venue</a></li>
-                <li><a href="#highlights" aria-label="Highlights">Highlights</a></li>
-                <li><a href="#support" aria-label="Support">Support</a></li>
                 <li><a href="#calendar" aria-label="Calendar">Calendar</a></li>
                 <li><a href="#sponsors" aria-label="Sponsors">Sponsors</a></li>
                 <li><a href="#about" aria-label="About">About</a></li>
-                <li><a href="#contact" aria-label="Contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Info & Support</a>
+                    <ul class="submenu">
+                        <li><a href="#highlights">Highlights</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -1163,19 +1215,19 @@
         <div class="venue-slider">
             <div class="venue-slides">
                 <div class="venue-slide">
-                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/img_2.jpg" alt="Lush grounds of MICC">
+                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/img_2.jpg" alt="Lush Grounds of MICC">
                     <div class="venue-slide-caption">Lush Grounds of MICC</div>
                 </div>
                 <div class="venue-slide">
-                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/CTA_1.jpg" alt="Key facility at MICC">
+                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/CTA_1.jpg" alt="Key Facility at MICC">
                     <div class="venue-slide-caption">Key Facility at MICC</div>
                 </div>
                 <div class="venue-slide">
-                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/img_3.jpg" alt="Conference Hall at MICC">
+                    <img src="https://images.unsplash.com/photo-1505373879085-37de22dee738" alt="Conference Hall at MICC">
                     <div class="venue-slide-caption">Conference Hall at MICC</div>
                 </div>
                 <div class="venue-slide">
-                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/img_1.jpg" alt="Exterior View of MICC">
+                    <img src="https://images.unsplash.com/photo-1497366811353-687c46d11142" alt="Exterior View of MICC">
                     <div class="venue-slide-caption">Exterior View of MICC</div>
                 </div>
             </div>
@@ -1201,6 +1253,7 @@
                     <li><strong>Generous Parking:</strong> Offers a secure parking area accommodating approximately 650 vehicles, providing convenience and safety for all attendees.</li>
                 </ul>
             </div>
+            
             <div class="content-card">
                 <h4>Extensive Facilities</h4>
                 <p><strong>Event Spaces:</strong></p>
@@ -1217,6 +1270,7 @@
                     <li>Expert in-house catering offers customizable menus for all occasions—from formal banquets to casual buffets</li>
                 </ul>
             </div>
+
             <div class="content-card">
                 <h4>Proven Excellence</h4>
                 <ul>
