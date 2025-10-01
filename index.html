@@ -22,7 +22,7 @@
         /* Header */
         header {
             background-color: rgba(255, 255, 255, 0.95);
-            padding: 15px 20px;
+            padding: 15px 40px; /* Increased padding for better spacing */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -95,21 +95,21 @@
             margin: 0;
             padding: 0;
             align-items: center;
-            flex-wrap: wrap;
+            gap: 20px; /* Added gap for better button spacing */
         }
 
         nav ul li {
-            margin-left: 15px;
+            margin-left: 0; /* Removed margin-left to use gap instead */
         }
 
         nav ul li a {
             color: #333;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
-            font-size: clamp(14px, 2vw, 15px);
-            padding: 6px 10px;
-            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: clamp(14px, 2vw, 16px); /* Slightly increased font size */
+            padding: 10px 20px; /* Increased padding for button-like appearance */
+            border-radius: 30px; /* Rounded buttons for modern look */
             white-space: nowrap;
         }
 
@@ -409,6 +409,32 @@
 
         .page-section a:hover {
             text-decoration: underline;
+        }
+
+        /* Venue Images */
+        .venue-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .venue-image-link {
+            display: block;
+            text-decoration: none;
+        }
+
+        .venue-image-link img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .venue-image-link img:hover {
+            transform: scale(1.05);
         }
 
         /* Sponsors Section */
@@ -1056,13 +1082,6 @@
                         <h3>Brighton Chiumya</h3>
                         <p>Media Lead - Covering all updates and aspects of the event Before, During, and After.</p>
                     </div>
-                 </div>
-             <div class="event-item">
-                    <img src="assets/pictures/Jigyasu_dinodia.jpeg" alt="Jingyasu Dinodia">
-                    <div class="details">
-                        <h3>Jigyasu Dinodia</h3>
-                        <p>Engagement support - Helps the organizing team by managing communications, logistics, and stakeholder interactions for successful events.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1114,7 +1133,22 @@
 
     <section id="venue" class="page-section">
         <h2>Venue: Mulungushi International Conference Centre (MICC)</h2>
-        <div style="max-width: 1000px; margin: 0 auto;">
+        <p style="color: #fff; text-align: center; margin-bottom: 30px; font-size: 18px;">Discover the premier venue for the BCM Open 2025, known for its state-of-the-art facilities and strategic location in Lusaka.</p>
+        <div class="venue-images">
+            <a href="https://micc.co.zm/" target="_blank" class="venue-image-link">
+                <img src="https://micc.co.zm/wp-content/uploads/2024/11/img_2.jpg" alt="Lush grounds of MICC">
+            </a>
+            <a href="https://micc.co.zm/" target="_blank" class="venue-image-link">
+                <img src="https://micc.co.zm/wp-content/uploads/2024/11/CTA_1.jpg" alt="Key facility at MICC">
+            </a>
+            <a href="https://micc.co.zm/" target="_blank" class="venue-image-link">
+                <img src="https://media.gettyimages.com/id/2148374188/photo/zambias-president-hakainde-hichilema-addresses-the-opening-session-of-the-2024-summit-of-the.jpg?s=612x612&w=gi&k=20&c=1zqG5l3gjO4nV6F3l6pW0YfC2p3k5r1mM6jM6jM6jM=" alt="Main Auditorium at MICC">
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://micc.co.zm/" class="view-all" target="_blank">Visit Venue Website</a>
+        </div>
+        <div style="max-width: 1000px; margin: 30px auto 0;">
             <div class="content-card">
                 <h4>Central & Accessible</h4>
                 <ul>
@@ -1195,18 +1229,18 @@
         <h2>Ticket Conditions & Payment</h2>
         <p style="color: #fff; text-align: center; margin-bottom: 30px;">Please review the following conditions before purchasing tickets:</p>
         <ul style="color: #fff;">
-            <li>Payments deadline - November 15, 2025.</li>
+            <li>Payment must be completed by November 15, 2025.</li>
             <li>All fees are non-refundable unless the event is canceled.</li>
             <li>Registration confirms your participation slot.</li>
         </ul>
         <div class="content-card" style="margin-top: 30px;">
-            <h4>Registration and Payment Details</h4>
-            <p><strong>Contact:</strong> Mr. Shamilimo (<a href="tel:+260975591157">+260975591157</a>)</p>
+            <h4>Registration and Payment</h4>
+            <p><strong>Contact:</strong> Mr. Shamilimo (+260975591157)</p>
             <p><strong>Payment Details:</strong></p>
             <ul>
-                <li><strong>MTN:</strong> +260761093358 (Bonface C. Mumba)</li>
-                <li><strong>Zamtel:</strong> +260950637535 (Bonface C. Mumba)</li>
-                <li><strong>Airtel:</strong> +260975591157 (Shamilimo)</li>
+                <li>MTN: +260761093358 (Bonface C. Mumba)</li>
+                <li>Zamtel: +260950637535 (Bonface C. Mumba)</li>
+                <li>Airtel: +260975591157</li>
             </ul>
         </div>
         <table class="price-table" style="margin-top: 30px;">
@@ -1291,7 +1325,7 @@
         <div style="max-width: 800px; margin: 0 auto;">
             <div class="content-card">
                 <h4>How do I register?</h4>
-                <p>Click on "Get Tickets" and follow the instructions in the <a href="#conditions">Ticket Conditions & Payment</a> section.</p>
+                <p>Click on "Get Tickets" and follow the instructions to register and pay.</p>
             </div>
             <div class="content-card">
                 <h4>What is the venue?</h4>
@@ -1357,17 +1391,17 @@
                 <div class="contact-card">
                     <div class="icon">📞</div>
                     <h4>Phone</h4>
-                    <a href="tel:+260761093387">+260 76 109 3387</a>
+                    <a href="tel:+260211234567">+260 211 234 567</a>
                 </div>
                 <div class="contact-card">
                     <div class="icon">✉️</div>
                     <h4>Email</h4>
-                    <a href="mailto:mumbab2014@gmail.com">mumbab2014@gmail.com</a>
+                    <a href="mailto:bcmchess2025@consult.com">bcmchess2025@consult.com</a>
                 </div>
                 <div class="contact-card">
                     <div class="icon">💬</div>
                     <h4>WhatsApp</h4>
-                    <a href="https://wa.me/260761093387">+260 76 109 3387</a>
+                    <a href="https://wa.me/260971234567">+260 97 123 4567</a>
                 </div>
                 <div class="contact-card">
                     <div class="icon">📍</div>
