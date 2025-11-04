@@ -767,6 +767,62 @@
             transform: rotate(360deg);
         }
 
+        /* Daily News Section (new) */
+        .daily-news {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .daily-news h2 {
+            font-size: clamp(24px, 4vw, 30px);
+            margin-bottom: 20px;
+            color: #ff4500;
+            font-weight: 700;
+        }
+
+        .daily-news .news-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .daily-news .news-item {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .daily-news .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .daily-news .news-item .date {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .daily-news .news-item h3 {
+            font-size: 16px;
+            margin: 8px 0;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .daily-news .news-item p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
         /* Footer */
         footer {
             background-color: #2c2c2c;
@@ -947,6 +1003,10 @@
             .venue-slide img {
                 height: 300px;
             }
+
+            .daily-news .news-list {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Fade in animation */
@@ -992,6 +1052,7 @@
                 </li>
                 <li><a href="#venue" aria-label="Venue">Venue</a></li>
                 <li><a href="#calendar" aria-label="Calendar">Calendar</a></li>
+                <li><a href="#news" aria-label="Daily News">Daily News</a></li>
                 <li><a href="#sponsors" aria-label="Sponsors">Sponsors</a></li>
                 <li><a href="#about" aria-label="About">About</a></li>
                 <li class="dropdown">
@@ -1010,7 +1071,7 @@
         <div class="hero-content">
             <h1>BCM OPEN 2025</h1>
             <p class="date">November 20th - 23rd, 2025<br>BCM CHESS CHAMPIONSHIP</p>
-            <a href="#upcoming" class="cta-button">Explore Events & Register</a>
+            <a href="#news" class="cta-button">Explore Events, Register & Daily News</a>
         </div>
     </section>
 
@@ -1068,6 +1129,32 @@
             </div>
         </div>
         <a href="#calendar" class="view-all">View All Events</a>
+    </section>
+
+    <!-- New Daily News Section (standard, updatable via code) -->
+    <section id="news" class="daily-news">
+        <h2>Daily News & Updates</h2>
+        <p>Stay updated with the latest announcements, player highlights, and event news. Check back daily!</p>
+        <div class="news-list">
+            <!-- Sample news items – replace/update these in code as needed -->
+            <div class="news-item">
+                <div class="date">November 04, 2025</div>
+                <h3>Registration Now Open!</h3>
+                <p>Secure your spot in the BCM Open 2025. Early bird rates available until November 15.</p>
+            </div>
+            <div class="news-item">
+                <div class="date">November 03, 2025</div>
+                <h3>PhilteQ Consult Confirmed as Lead Sponsor</h3>
+                <p>Zambia's premier consultancy firm partners with BCM for another exciting championship.</p>
+            </div>
+            <div class="news-item">
+                <div class="date">November 02, 2025</div>
+                <h3>Venue Spotlight: MICC</h3>
+                <p>Explore the state-of-the-art facilities at Mulungushi International Conference Centre.</p>
+            </div>
+            <!-- Add more .news-item blocks here via code updates -->
+        </div>
+        <a href="#news" class="view-all">Refresh for Latest</a>
     </section>
 
     <section id="welcome" class="page-section">
@@ -1591,7 +1678,7 @@
 
         // Page load and section toggling
         window.onload = function() {
-            const sections = document.querySelectorAll('.hero, .upcoming-events, .page-section');
+            const sections = document.querySelectorAll('.hero, .upcoming-events, .daily-news, .page-section');
             sections.forEach(sec => {
                 sec.style.opacity = '0';
                 sec.style.display = 'none';
@@ -1610,7 +1697,7 @@
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
-                const sections = document.querySelectorAll('.hero, .upcoming-events, .page-section');
+                const sections = document.querySelectorAll('.hero, .upcoming-events, .daily-news, .page-section');
                 sections.forEach(sec => {
                     sec.style.opacity = '0';
                     sec.style.display = 'none';
@@ -1618,12 +1705,14 @@
 
                 const target = document.querySelector(targetId);
                 if (target) {
-                    if (targetId === '#home' || targetId === '#upcoming') {
+                    if (targetId === '#home' || targetId === '#upcoming' || targetId === '#news') {
                         document.querySelector('#home').style.display = 'flex';
                         document.querySelector('#upcoming').style.display = 'block';
+                        if (targetId === '#news') document.querySelector('#news').style.display = 'block';
                         setTimeout(() => {
                             document.querySelector('#home').style.opacity = '1';
                             document.querySelector('#upcoming').style.opacity = '1';
+                            if (targetId === '#news') document.querySelector('#news').style.opacity = '1';
                         }, 50);
                     } else {
                         target.style.display = 'block';
@@ -1723,7 +1812,7 @@
                 });
             }, observerOptions);
 
-            document.querySelectorAll('.event-item, .contact-card, .feature-card, .sponsors-grid div, .lead-sponsor, .content-card').forEach(el => {
+            document.querySelectorAll('.event-item, .news-item, .contact-card, .feature-card, .sponsors-grid div, .lead-sponsor, .content-card').forEach(el => {
                 observer.observe(el);
             });
         });
