@@ -929,12 +929,19 @@
             color: #fff;
             font-size: 18px;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .social-icons a:hover {
             background-color: #ff4500;
             transform: scale(1.1);
         }
+
+        /* Social Media Icons (Font Awesome) */
+        .social-icons .fa-facebook-f::before { content: "\f09a"; }
+        .social-icons .fa-linkedin-in::before { content: "\f0e1"; }
+        .social-icons .fa-twitter::before { content: "\f099"; }
+        .social-icons .fa-instagram::before { content: "\f16d"; }
 
         .copyright {
             text-align: center;
@@ -1027,6 +1034,8 @@
             overflow: hidden;
         }
     </style>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div class="nav-overlay"></div>
@@ -1610,7 +1619,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER - FIXED SOCIAL LINKS -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -1647,11 +1656,12 @@
             </div>
         </div>
 
+        <!-- SOCIAL MEDIA LINKS - NOW WITH REAL ICONS & WORKING LINKS -->
         <div class="social-icons">
-            <a href="https://facebook.com/bcmchess" aria-label="Facebook">Facebook</a>
-            <a href="https://www.linkedin.com/in/bcmchess" aria-label="LinkedIn">LinkedIn</a>
-            <a href="https://twitter.com/bcmchess" aria-label="Twitter">Twitter</a>
-            <a href="https://instagram.com/bcmchess" aria-label="Instagram">Instagram</a>
+            <a href="https://facebook.com/bcmchess" target="_blank" aria-label="Facebook" class="fab fa-facebook-f"></a>
+            <a href="https://linkedin.com/company/bcm-consult" target="_blank" aria-label="LinkedIn" class="fab fa-linkedin-in"></a>
+            <a href="https://twitter.com/bcmchess" target="_blank" aria-label="Twitter" class="fab fa-twitter"></a>
+            <a href="https://instagram.com/bcmchess" target="_blank" aria-label="Instagram" class="fab fa-instagram"></a>
         </div>
 
         <div class="copyright">
