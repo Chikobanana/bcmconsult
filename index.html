@@ -257,7 +257,25 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
 
-        /* No CTA button in hero - removed as requested */
+        .hero .cta-button {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: clamp(14px, 2vw, 16px);
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #e03a00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
 
         /* Upcoming Events Section */
         .upcoming-events {
@@ -417,7 +435,7 @@
             text-decoration: underline;
         }
 
-        /* News Section (New Page) */
+        /* Daily News Page */
         #daily-news {
             background: #fff;
             color: #333;
@@ -646,7 +664,7 @@
             border-radius: 8px;
         }
 
-        /* Enhanced Price Display */
+        /* Price Display */
         .price-table {
             max-width: 900px;
             margin: 20px auto;
@@ -680,17 +698,6 @@
             font-size: 16px;
             font-weight: 600;
             color: #ff4500;
-        }
-
-        /* Mobile table responsiveness */
-        @media (max-width: 768px) {
-            .price-table {
-                font-size: 11px;
-            }
-            
-            .price-table th, .price-table td {
-                padding: 8px 6px;
-            }
         }
 
         /* Contact Section */
@@ -1063,10 +1070,12 @@
         </nav>
     </header>
 
+    <!-- HOME PAGE: Hero + Upcoming Events -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>BCM OPEN 2025</h1>
             <p class="date">November 20th - 23rd, 2025<br>BCM CHESS CHAMPIONSHIP</p>
+            <a href="#daily-news" class="cta-button">Daily News</a>
         </div>
     </section>
 
@@ -1126,10 +1135,445 @@
         <a href="#calendar" class="view-all">View All Events</a>
     </section>
 
-    <!-- All other sections remain unchanged... -->
-    <!-- (Welcome, Why Participate, Teams, Venue, Calendar, etc.) -->
+    <!-- ALL OTHER SECTIONS (unchanged) -->
+    <section id="welcome" class="page-section">
+        <h2>Welcome to BCM Open 2025</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="content-card">
+                <h4>Welcome to the BCM Open 2025 Chess Championship!</h4>
+                <p>Gather with us from November 20–23, 2025, at the iconic Mulungushi International Conference Centre in central Lusaka, conveniently located on Great East Road and easily accessible from the city center, airport, and major transportation routes.</p>
+                <p>Organized by BCM Consult, this premier FIDE-rated tournament promises a competitive experience wrapped in comfort, professionalism, and prestige.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- NEW: Daily News Page -->
+    <section id="why-participate" class="page-section">
+        <h2>Why Participate in the BCM Chess Tournament</h2>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon-box">Trophy</div>
+                    <h4>Prestigious Competition</h4>
+                    <p>Engage in FIDE-rated divisions across Elite, Open, Ladies, and Youth (U-10 to U-16) categories.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">Building</div>
+                    <h4>Elegant Venue, Professional Ambience</h4>
+                    <p>MICC is one of Zambia's top-tier conference venues, offering modern halls, AV technology, interpretation systems, and polished event execution.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">Location</div>
+                    <h4>Prime Accessibility</h4>
+                    <p>Located in the heart of Lusaka, MICC provides easy access from hotels, shopping centers, and Kenneth Kaunda International Airport—less than a 30-minute drive away.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">Office Building</div>
+                    <h4>Comprehensive Facilities</h4>
+                    <p>Host to seven conference halls (including one with up to 2,500-delegate capacity), MICC offers ample parking, high-speed internet, catering, and attentive support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">Star</div>
+                    <h4>Attested Quality</h4>
+                    <p>Visitors praise its spacious, well-maintained ambiance, top-notch tech setup, and professional staff—making it ideal for large-scale, high-energy events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="organizing-team" class="page-section">
+        <h2>Organizing Team</h2>
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <p style="color: #fff; text-align: center; font-size: 16px; margin-bottom: 25px;">Meet the team behind BCM Open 2025:</p>
+            <div class="event-list">
+                <div class="event-item">
+                    <img src="assets/pictures/bonface_mumba.jpg" alt="Bonface Mumba">
+                    <div class="details">
+                        <h3>Bonface Mumba</h3>
+                        <p>Chief Organizer - Flawless planning and execution of the championship.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/rodney_katongo.jpg" alt="Rodney Katongo">
+                    <div class="details">
+                        <h3>Rodney Katongo</h3>
+                        <p>Chairperson Organizing Committee - Overseeing the overall success.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/female_icon.jpg" alt="Sarah Lungu">
+                    <div class="details">
+                        <h3>Sarah Lungu</h3>
+                        <p>Tournament Director - Strategically managing schedule, flow, and participant experience.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/musongo_shamilimo.jpg" alt="Musongo Shamilimo">
+                    <div class="details">
+                        <h3>Musongo Shamilimo</h3>
+                        <p>Logistics & Registration Team - Ensuring seamless onboarding, venue coordination, and player support.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/kapalu_kaminda.jpg" alt="Kapalu Kaminda">
+                    <div class="details">
+                        <h3>Kapalu Kaminda</h3>
+                        <p>Sponsorship & Partnerships Team - Securing resources, visibility, and collaborative support.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/brighton_chiumya.jpg" alt="Brighton Chiumya">
+                    <div class="details">
+                        <h3>Brighton Chiumya</h3>
+                        <p>Media Lead - Covering all updates and aspects of the event Before, During, and After.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technical-team" class="page-section">
+        <h2>Technical Team</h2>
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <p style="color: #fff; text-align: center; font-size: 16px; margin-bottom: 25px;">Delivering fairness, precision, and seamless execution:</p>
+            <div class="event-list">
+                <div class="event-item">
+                    <img src="assets/pictures/aaron_banda.jpg" alt="Aaron Banda">
+                    <div class="details">
+                        <h3>Aaron Banda</h3>
+                        <p>Chief Arbiter - Responsible for pairing accuracy, rule enforcement, and conflict resolution.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/male_icon.jpg" alt="Immanuel Chikonde">
+                    <div class="details">
+                        <h3>Immanuel Chikonde</h3>
+                        <p>Assistant Arbiter - Ensuring proper conduct and smooth operations across all boards.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/male_icon.jpg" alt="James Sakala">
+                    <div class="details">
+                        <h3>James Sakala</h3>
+                        <p>Pairings Coordinator - Timely publishing of matchups and standings across divisions.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/brianlwenyeka.jpeg" alt="Brian Lwenyeka">
+                    <div class="details">
+                        <h3>Brian Lwenyeka</h3>
+                        <p>IT & Digital Support - Running live scoring systems, digital display infrastructure, and tech services.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/pictures/vernon_mweetwa.jpg" alt="Vernon Mweetwa">
+                    <div class="details">
+                        <h3>Vernon Mweetwa</h3>
+                        <p>Fair Play - Safeguarding the integrity and transparency of the competition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="venue" class="page-section">
+        <h2>Venue: Mulungushi International Conference Centre (MICC)</h2>
+        <p style="color: #fff; text-align: center; margin-bottom: 25px; font-size: 16px;">Discover the premier venue for the BCM Open 2025, known for its state-of-the-art facilities and strategic location in Lusaka.</p>
+        <div class="venue-slider">
+            <div class="venue-slides">
+                <div class="venue-slide">
+                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/img_2.jpg" alt="Lush Grounds of MICC">
+                    <div class="venue-slide-caption">Lush Grounds of MICC</div>
+                </div>
+                <div class="venue-slide">
+                    <img src="https://micc.co.zm/wp-content/uploads/2024/11/CTA_1.jpg" alt="Key Facility at MICC">
+                    <div class="venue-slide-caption">Key Facility at MICC</div>
+                </div>
+                <div class="venue-slide">
+                    <img src="https://images.unsplash.com/photo-1505373879085-37de22dee738" alt="Conference Hall at MICC">
+                    <div class="venue-slide-caption">Conference Hall at MICC</div>
+                </div>
+                <div class="venue-slide">
+                    <img src="https://images.unsplash.com/photo-1497366811353-687c46d11142" alt="Exterior View of MICC">
+                    <div class="venue-slide-caption">Exterior View of MICC</div>
+                </div>
+            </div>
+            <div class="venue-slider-nav">
+                <button class="prev-slide">Previous</button>
+                <button class="next-slide">Next</button>
+            </div>
+            <div class="venue-slider-dots">
+                <span class="venue-slider-dot active"></span>
+                <span class="venue-slider-dot"></span>
+                <span class="venue-slider-dot"></span>
+                <span class="venue-slider-dot"></span>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 25px;">
+            <a href="https://micc.co.zm/" class="view-all" target="_blank">Visit Venue Website</a>
+        </div>
+        <div style="max-width: 1000px; margin: 25px auto 0;">
+            <div class="content-card">
+                <h4>Central & Accessible</h4>
+                <ul>
+                    <li><strong>Prime Location:</strong> Situated on Great East Road in Lusaka, MICC is in close proximity to hotels, banks, shopping malls, and under a 30-minute drive from the airport.</li>
+                    <li><strong>Generous Parking:</strong> Offers a secure parking area accommodating approximately 650 vehicles, providing convenience and safety for all attendees.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h4>Extensive Facilities</h4>
+                <p><strong>Event Spaces:</strong></p>
+                <ul>
+                    <li>Seven adaptable conference halls, including a main hall with seating for 2,500 delegates</li>
+                    <li>A suite of spaces including Main Auditorium, Banquet Hall, Committee Rooms, Meeting Rooms, Board Rooms</li>
+                </ul>
+                <p><strong>Technology & Support:</strong></p>
+                <ul>
+                    <li>Equipped with modern AV setups, dedicated high-speed internet, and full event tech support</li>
+                </ul>
+                <p><strong>Catering & Hospitality:</strong></p>
+                <ul>
+                    <li>Expert in-house catering offers customizable menus for all occasions—from formal banquets to casual buffets</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h4>Proven Excellence</h4>
+                <ul>
+                    <li><strong>Track Record:</strong> Successfully hosted major international events, from summits to expos and cultural gatherings</li>
+                    <li><strong>Positive Reviews:</strong> Visitors highlight the venue's modern design, spacious layout, helpful staff, and seamless experience</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="page-section">
+        <h2>Event Details</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Fee</th>
+                    <th>Prizes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Elite Section (Rating above 2100)</td>
+                    <td class="price-highlight">K500</td>
+                    <td>1st: K30,000 + Trophy + Medal<br>2nd: K15,000 + Medal<br>3rd: K10,000 + Medal<br>4th: K7,000<br>5th: K4,000</td>
+                </tr>
+                <tr>
+                    <td>Open Section (Rating 2099 and below)</td>
+                    <td class="price-highlight">K500</td>
+                    <td>1st: K10,000 + Trophy + Medal<br>2nd: K7,000 + Medal<br>3rd: K5,000 + Medal<br>4th: K4,000<br>5th: K3,000<br>6th: K2,000</td>
+                </tr>
+                <tr>
+                    <td>Ladies Section</td>
+                    <td class="price-highlight">K500</td>
+                    <td>1st: K15,000 + Trophy + Medal<br>2nd: K10,000 + Medal<br>3rd: K6,000 + Medal<br>4th: K5,000<br>5th: K3,000<br>6th: K1,000</td>
+                </tr>
+                <tr>
+                    <td>Developmental Sections (U16, U14, U12, U10 - Open & Girls)</td>
+                    <td class="price-highlight">K300</td>
+                    <td>1st: K1000 + Trophy + Medal + Certificate<br>2nd: K700 + Medal + Certificate<br>3rd: K500 + Medal + Certificate</td>
+                </tr>
+                <tr>
+                    <td>Special Prizes</td>
+                    <td class="price-highlight">N/A</td>
+                    <td>Veterans 50+: K2000<br>PWD: K1500<br>PWD Female: K1000<br>Foreign Players: K1000</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center; margin-top: 20px; color: #fff;">Registration is now open! Please proceed to the <a href="#conditions">Ticket Conditions & Payment</a> section for details.</p>
+    </section>
+
+    <section id="conditions" class="page-section">
+        <h2>Ticket Conditions & Payment</h2>
+        <p style="color: #fff; text-align: center; margin-bottom: 25px;">Please review the following conditions before purchasing tickets:</p>
+        <ul style="color: #fff;">
+            <li>Payment must be completed by November 15, 2025.</li>
+            <li>All fees are non-refundable unless the event is canceled.</li>
+            <li>Registration confirms your participation slot.</li>
+        </ul>
+        <div class="content-card" style="margin-top: 25px;">
+            <h4>Registration and Payment</h4>
+            <p><strong>Contact:</strong> Mr. Shamilimo (+260975591157)</p>
+            <p><strong>Payment Details:</strong></p>
+            <ul>
+                <li>MTN: +260761093358 (Bonface C. Mumba)</li>
+                <li>Zamtel: +260950637535 (Bonface C. Mumba)</li>
+                <li>Airtel: +260975591157</li>
+            </ul>
+        </div>
+        <table class="price-table" style="margin-top: 25px;">
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Elite, Open, Ladies</td>
+                    <td class="price-highlight">K500</td>
+                </tr>
+                <tr>
+                    <td>Foreign Players</td>
+                    <td class="price-highlight">K1000</td>
+                </tr>
+                <tr>
+                    <td>Developmental Sections & PWD</td>
+                    <td class="price-highlight">K300</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="about" class="page-section">
+        <h2>About Us</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="content-card">
+                <h4>About BCM Consult</h4>
+                <p>BCM Consult is dedicated to promoting chess in Zambia and Africa. We organize high-quality FIDE-rated tournaments to foster talent and competition. Our mission is to create opportunities for players of all levels to compete, grow, and connect through the game of chess.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calendar" class="page-section">
+        <h2>Event Calendar</h2>
+        <div class="countdown" id="countdown" style="text-align: center; margin-bottom: 25px; font-size: 22px; color: #fff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);"></div>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Time</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>November 20</td>
+                        <td>Elite, Open, Ladies - Round 1</td>
+                        <td>9:00 AM</td>
+                        <td>Mulungushi Conference Centre</td>
+                    </tr>
+                    <tr>
+                        <td>November 21</td>
+                        <td>Open Chess Section</td>
+                        <td>9:00 AM</td>
+                        <td>Mulungushi Conference Centre</td>
+                    </tr>
+                    <tr>
+                        <td>November 22</td>
+                        <td>Developmental Sections Start</td>
+                        <td>9:00 AM</td>
+                        <td>Mulungushi Conference Centre</td>
+                    </tr>
+                    <tr>
+                        <td>November 23</td>
+                        <td>Ladies Chess Tournament & Finals</td>
+                        <td>9:00 AM</td>
+                        <td>Mulungushi Conference Centre</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="support" class="page-section">
+        <h2>Support</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="content-card">
+                <h4>How do I register?</h4>
+                <p>Click on "Get Tickets" and follow the instructions to register and pay.</p>
+            </div>
+            <div class="content-card">
+                <h4>What is the venue?</h4>
+                <p>Mulungushi Conference Centre, Lusaka, Zambia.</p>
+            </div>
+            <div class="content-card">
+                <h4>Are there refunds?</h4>
+                <p>No, fees are non-refundable unless the event is canceled.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="highlights" class="page-section">
+        <h2>Highlights</h2>
+        <div class="feature-grid" style="max-width: 1000px; margin: 0 auto;">
+            <div class="feature-card">
+                <h3>FIDE Rated</h3>
+                <p>Compete in an official FIDE-rated tournament and improve your rating.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Attractive Prizes</h3>
+                <p>Win cash prizes, trophies, medals, and certificates.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Developmental Focus</h3>
+                <p>Sections for young players to build the future of chess in Africa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="page-section">
+        <h2>Our Sponsors</h2>
+        <p style="color: #fff; text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 16px;">We are grateful to our sponsors for their support in making the BCM Open 2025 a success.</p>
+        <div class="lead-sponsor">
+            <h3>Lead Sponsor: PhilteQ Consult LTD</h3>
+            <a href="https://www.philteqconsult.com/" target="_blank">
+                <img src="assets/pictures/pqcl.jpg" alt="PhilteQ Consult LTD Lead Sponsor Logo">
+            </a>
+            <p style="color: #fff; max-width: 600px; margin: 12px auto;">PhilteQ Consult LTD, Zambia's first one-stop consultancy, brings expertise in business development, financial advisory, and intellectual property to drive growth and innovation.</p>
+            <div>
+                <img src="assets/pictures/qrcode.jpg" alt="PhilteQ Consult LTD QR Code" class="qr-code">
+            </div>
+            <a href="https://www.philteqconsult.com/" class="view-all" target="_blank">Visit Sponsor</a>
+        </div>
+        <div class="sponsors-grid">
+            <div>
+                <img src="assets/pictures/aawlogo.jpg" alt="AAW Sponsor Logo" class="sponsor-logo">
+            </div>
+            <div>
+                <img src="assets/pictures/zcphlogo.png" alt="ZCPH Sponsor Logo" class="sponsor-logo">
+            </div>
+            <div>
+                <img src="assets/pictures/logo.png" alt="BCM Sponsor Logo" class="sponsor-logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="page-section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p style="color: #fff; font-size: 16px; margin-bottom: 25px;">Get in touch with us for more information or support.</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="icon">Phone</div>
+                    <h4>Phone</h4>
+                    <a href="tel:+260211234567">+260 211 234 567</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">Envelope</div>
+                    <h4>Email</h4>
+                    <a href="mailto:bcmchess2025@consult.com">bcmchess2025@consult.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">Chat Bubble</div>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/260971234567">+260 97 123 4567</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">Location</div>
+                    <h4>Location</h4>
+                    <p style="color: #666; margin: 0;">Mulungushi Conference Centre<br>Lusaka, Zambia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAILY NEWS PAGE -->
     <section id="daily-news" class="page-section">
         <h2>Daily News & Updates</h2>
         <div class="news-list">
@@ -1139,7 +1583,7 @@
                     <h3>Registration Extended to November 18th!</h3>
                     <div class="news-meta">November 4, 2025 | 2 min read</div>
                     <p>Due to high demand, we've extended the registration deadline. Secure your spot in the BCM Open 2025 now!</p>
-                    <a href="#" class="read-more">Read More →</a>
+                    <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="news-item">
@@ -1148,7 +1592,7 @@
                     <h3>Meet the Defending Champion: GM Alex K.</h3>
                     <div class="news-meta">November 3, 2025 | 3 min read</div>
                     <p>Learn about the journey of last year's winner and what to expect in the Elite section.</p>
-                    <a href="#" class="read-more">Read More →</a>
+                    <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="news-item">
@@ -1157,7 +1601,7 @@
                     <h3>Behind the Scenes: MICC Preparations</h3>
                     <div class="news-meta">November 2, 2025 | 4 min read</div>
                     <p>A sneak peek into the setup at Mulungushi International Conference Centre for the big event.</p>
-                    <a href="#" class="read-more">Read More →</a>
+                    <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
         </div>
@@ -1166,11 +1610,57 @@
         </div>
     </section>
 
-    <!-- Remaining sections (venue, calendar, sponsors, contact, etc.) unchanged -->
-    <!-- ... (include all other sections as before) ... -->
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#details">Awards</a></li>
+                    <li><a href="#organizing-team">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#about">Our Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#highlights">Blog</a></li>
+                    <li><a href="#upcoming">Events</a></li>
+                    <li><a href="#support">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter-section">
+                <h3>Subscribe</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">Arrow Right</button>
+                </div>
+                <p style="font-size: 12px; color: #999; margin-top: 10px; font-style: italic;">Get digital marketing updates in your mailbox</p>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://facebook.com/bcmchess" aria-label="Facebook">Facebook</a>
+            <a href="https://www.linkedin.com/in/bcmchess" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://twitter.com/bcmchess" aria-label="Twitter">Twitter</a>
+            <a href="https://instagram.com/bcmchess" aria-label="Instagram">Instagram</a>
+        </div>
+
+        <div class="copyright">
+            © 2009 - 2025 BCM Consult Private Ltd. All Rights Reserved.
+        </div>
+    </footer>
 
     <script>
-        // Mobile menu functionality
+        // Mobile menu
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
         const navOverlay = document.querySelector('.nav-overlay');
@@ -1194,7 +1684,7 @@
         navOverlay.addEventListener('click', closeMenu);
         navLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-        // Page load and section toggling
+        // Page load
         window.onload = function() {
             const sections = document.querySelectorAll('.hero, .upcoming-events, .page-section');
             sections.forEach(sec => {
@@ -1210,7 +1700,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
 
-        // Smooth scrolling and section toggling
+        // Navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1223,20 +1713,59 @@
 
                 const target = document.querySelector(targetId);
                 if (target) {
-                    target.style.display = (targetId === '#home' || targetId === '#upcoming') ? 'block' : 'block';
                     if (targetId === '#home') {
                         document.querySelector('#home').style.display = 'flex';
                         document.querySelector('#upcoming').style.display = 'block';
+                        setTimeout(() => {
+                            document.querySelector('#home').style.opacity = '1';
+                            document.querySelector('#upcoming').style.opacity = '1';
+                        }, 50);
+                    } else {
+                        target.style.display = 'block';
+                        setTimeout(() => {
+                            target.style.opacity = '1';
+                        }, 50);
                     }
-                    setTimeout(() => {
-                        target.style.opacity = '1';
-                    }, 50);
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // Venue Slider (unchanged)
+        // Countdown
+        function updateCountdown() {
+            const eventDate = new Date('November 20, 2025 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = 'The event has started!';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until the event starts!`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Newsletter
+        document.querySelector('.newsletter-form button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = document.querySelector('.newsletter-form input').value;
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing!');
+                document.querySelector('.newsletter-form input').value = '';
+            } else {
+                alert('Please enter a valid email.');
+            }
+        });
+
+        // Venue Slider
         let slideIndex = 0;
         const slides = document.querySelectorAll('.venue-slide');
         const dots = document.querySelectorAll('.venue-slider-dot');
@@ -1246,9 +1775,7 @@
             if (index >= totalSlides) slideIndex = 0;
             if (index < 0) slideIndex = totalSlides - 1;
             document.querySelector('.venue-slides').style.transform = `translateX(-${slideIndex * 100}%)`;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === slideIndex);
-            });
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === slideIndex));
         }
 
         document.querySelector('.next-slide')?.addEventListener('click', () => {
